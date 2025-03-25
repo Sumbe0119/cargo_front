@@ -85,7 +85,11 @@ const Home = () => {
                   <option>Утасны дугаараар</option>
                   <option>Трак шодоор</option>
                 </CustomSelect>
-                <CustomInput placeholder="Утасны дугаараа хайх" />
+                <CustomInput
+                  placeholder="Утасны дугаараа хайх"
+                  onChange={() => console.info("object")}
+                  value={""}
+                />
                 <CustomButton
                   title="Шалгах"
                   loading={false}
