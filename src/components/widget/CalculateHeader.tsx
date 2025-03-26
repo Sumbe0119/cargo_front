@@ -16,7 +16,7 @@ const CalculateHeader = ({
 }: Props) => {
   return (
     <div
-      className={`group/item grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xs:gap-3 lg:gap-6 cursor-pointer`}
+      className={`group/item grid xs:grid-cols-2 lg:grid-cols-4 xs:gap-3 lg:gap-6 cursor-pointer`}
     >
       <div
         className={`border border-light rounded-xl hover:border-primary px-4 h-20 flex items-center justify-between`}

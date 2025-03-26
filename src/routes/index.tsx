@@ -5,6 +5,8 @@ import MainLayout from "../components/layout";
 import About from "../pages/About";
 import Calculate from "../pages/Calculate";
 import Address from "../pages/Address";
+import Terms from "../pages/Terms";
+import BranchSingle from "../pages/BranchSingle";
 
 const AppRoutes = () => {
   return (
@@ -16,6 +18,8 @@ const AppRoutes = () => {
             <Route path="/about" element={<About />} />
             <Route path="/calculate" element={<Calculate />} />
             <Route path="/address" element={<Address />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/branch/:id" element={<BranchSingle />} />
           </Route>
         </Routes>
       </Suspense>

@@ -5,9 +5,10 @@ import MainFooter from "./MainFooter";
 
 const MainLayout = () => {
   return (
-    <div className="space-y-14">
+    <div className="xs:space-y-6 lg:space-y-12">
       <MainHeader />
       <Outlet />
+      <div className="h-11"></div>
       <MainFooter />
     </div>
   );

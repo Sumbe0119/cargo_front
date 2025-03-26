@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+input,
+textarea {
+  touch-action: manipulation;
+}
 .container {
   max-width: 1024px;
   margin: 0 auto;

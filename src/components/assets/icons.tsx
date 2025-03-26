@@ -87,6 +87,24 @@ export const HomeIcon = () => {
     </svg>
   );
 };
+export const AddressIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="22"
+      fill="none"
+      viewBox="0 0 22 22"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="m8 17-7 4V5l7-4m0 16 7 4m-7-4V1m7 20 6-4V1l-6 4m0 16V5m0 0L8 1"
+      ></path>
+    </svg>
+  );
+};
 export const BoxIcon = ({ size }: Props) => {
   return (
     <svg
@@ -177,12 +195,35 @@ export const MoneyIcon = ({ size }: Props) => {
 };
 export const ArrowIcon = ({ size }: Props) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size ? size : '24'} height={size ? size : '24'} viewBox="0 0 24 24">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size ? size : "24"}
+      height={size ? size : "24"}
+      viewBox="0 0 24 24"
+    >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         d="m15 18-6-6 6-6"
       ></path>
     </svg>
-  )
-}
+  );
+};
+export const CalculateIcon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      viewBox="0 0 20 20"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="m15.5 4.5-11 11m2-7v-4m-2 2h4m3 7h4M5.8 19h8.4c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.311-1.311C19 16.72 19 15.88 19 14.2V5.8c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C16.72 1 15.88 1 14.2 1H5.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C1 3.28 1 4.12 1 5.8v8.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311C3.28 19 4.12 19 5.8 19"
+      ></path>
+    </svg>
+  );
+};

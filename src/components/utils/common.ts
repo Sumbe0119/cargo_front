@@ -1,3 +1,5 @@
+import { imageUrl } from "../api/config";
+
 export const getFormatMoney = (price: any) => {
   if (!price) {
     return "0₮";
@@ -38,3 +40,6 @@ export const getFormatYuan = (price: any) => {
     }
   };
   
+  export const getImageUrl = (image: string) => {
+    return `${imageUrl()}${image}`
+  }

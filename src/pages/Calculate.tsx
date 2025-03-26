@@ -23,8 +23,8 @@ interface BoxDimensions {
 }
 
 const WEIGHT_PRICE = 3000; // MNT per kg
-const BELOW_1M3 = 599; // CNY per m³
-const ABOVE_1M3 = 399; // CNY per m³
+const BELOW_1M3 = 269550; // CNY per m³ 599 yuan
+const ABOVE_1M3 = 179550; // CNY per m³ 399yuan
 
 const Calculate = () => {
   const [dimensions, setDimensions] = useState<BoxDimensions>({
@@ -96,7 +96,7 @@ const Calculate = () => {
   }, [price]);
 
   return (
-    <div className="container xs:py-8 grid gap-8">
+    <div className="container xs:py-8 grid gap-8 xs:px-4">
       {/* Агуулах сонгох хэсэг */}
       <div className="flex items-start justify-between">
         <h1 className="grid gap-1 leading-3">
@@ -145,7 +145,7 @@ const Calculate = () => {
 
       <div className="flex-col flex space-y-4">
         <h2 className="text-sm font-medium text-black">Ачаа овор хэмжээ</h2>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid xs:grid-cols-2 lg:grid-cols-4 xs:gap-3 lg:gap-6">
           <CustomInput
             placeholder="өргөн"
             value={dimensions.width}
