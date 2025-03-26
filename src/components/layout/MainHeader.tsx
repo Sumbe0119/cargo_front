@@ -85,6 +85,7 @@ const MainHeader = () => {
           </div>
         </div>
       </header>
+      {/* <div className="xs:h-16 lg:h-28"></div> */}
       <footer
         className={`${
           ["/", "/calculate", "/address"].includes(pathname)

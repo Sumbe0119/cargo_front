@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="container bg-white space-y-14 xs:px-4 lg:px-0">
+      <div className="container xs:px-4 lg:px-0 xs:space-y-3 lg:space-y-12">
         <div className="grid xs:grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="relative xs:hidden lg:block">
             <img
