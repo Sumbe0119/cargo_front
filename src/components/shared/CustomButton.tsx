@@ -4,13 +4,14 @@ interface Props {
   loading: boolean;
   title: string;
   onClick: () => void;
+  className?: string;
 }
 
-const CustomButton = ({ loading, title, onClick }: Props) => {
+const CustomButton = ({ loading, title, onClick, className }: Props) => {
   return (
     <button
       onClick={onClick}
-      className="flex items-center justify-center gap-3 h-11 bg-primary rounded-xl"
+      className={`flex items-center justify-center gap-3 h-11 bg-primary rounded-xl ${className}`}
     >
       {loading && (
         <span>

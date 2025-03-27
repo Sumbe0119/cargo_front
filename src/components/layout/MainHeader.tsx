@@ -24,10 +24,10 @@ const MainHeader = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <>
-      <header className="fixed w-full top-0 bg-white z-10 xs:h-16 lg:h-28 border-b border-b-light">
-        <div className="text-sm container mx-auto xs:h-16 lg:h-28 flex items-center justify-between xs:px-2 2xl:px-4">
+      <header className="sticky w-full top-0 bg-white z-10 h-auto border-b border-b-light py-3">
+        <div className="text-sm container mx-auto flex items-center justify-between xs:px-2 2xl:px-0">
           <div className="container flex items-center justify-between">
-            <div className="flex items-center gap-6 xs:px-4">
+            <div className="flex items-center gap-6 xs:px-4 lg:px-0">
               {isMobile ? (
                 <div
                   onClick={() => navigate(-1)}
@@ -40,7 +40,7 @@ const MainHeader = () => {
                   <ArrowIcon size="22" />
                 </div>
               ) : null}
-              <ul className="xs:hidden lg:flex items-center font-semibold">
+              <ul className="xs:hidden lg:flex items-center font-semibold gap-4 divide-x divide-x-dark">
                 <li>
                   <Link
                     to="/"
@@ -48,11 +48,12 @@ const MainHeader = () => {
                       pathname === "/"
                         ? "text-primary stroke-primary"
                         : "text-black stroke-black"
-                    } hover:text-primary p-4`}
+                    } hover:text-primary flex items-center justify-center text-base`}
                   >
-                    <div className="flex items-center stroke-2 px-4 transition-all hover:stroke-primary">
+                    <div className="flex items-center stroke-2 px-3 transition-all hover:stroke-primary">
                       <HomeIcon />
                     </div>
+                    Нүүр хуудас
                   </Link>
                 </li>
                 {menus?.map((item, index) => {
@@ -61,9 +62,10 @@ const MainHeader = () => {
                     <li key={index}>
                       <Link
                         to={item?.link}
+                        // style={{ fontWeight: "400" }}
                         className={`${
                           isActive ? "text-primary" : "text-black"
-                        } hover:text-primary transition-text  p-4`}
+                        } hover:text-primary transition-text text-base p-4`}
                       >
                         {item?.title}
                       </Link>
@@ -75,7 +77,7 @@ const MainHeader = () => {
             <div
               onClick={() => setVisible(true)}
               className="text-white stroke-white hover:text-primary hover:stroke-primary transition-text hover:bg-primary/10 
-        hover:border-primary/10 bg-primary border border-primary rounded-full flex items-center h-11 px-6 gap-2 cursor-pointer"
+        hover:border-primary/10 bg-primary border border-primary rounded-2xl flex items-center h-11 px-6 gap-2 cursor-pointer"
             >
               <span className={`stroke-2`}>
                 <UserIcon size={"16"} />

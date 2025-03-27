@@ -96,7 +96,7 @@ const Calculate = () => {
   }, [price]);
 
   return (
-    <div className="container xs:py-8 grid gap-8 xs:px-4">
+    <div className="simple-container xs:px-4 lg:px-0 xs:space-y-3 lg:space-y-12">
       {/* Агуулах сонгох хэсэг */}
       <div className="flex items-start justify-between">
         <h1 className="grid gap-1 leading-3">
@@ -152,6 +152,7 @@ const Calculate = () => {
             onChange={(e) => handleChange("width", e)}
             error={formErrors.width}
             showText
+            type="numeric"
             simpleText="cm"
           />
           <CustomInput
@@ -160,6 +161,7 @@ const Calculate = () => {
             onChange={(e) => handleChange("height", e)}
             error={formErrors.height}
             showText
+            type="numeric"
             simpleText="cm"
           />
           <CustomInput
@@ -168,6 +170,7 @@ const Calculate = () => {
             onChange={(e) => handleChange("length", e)}
             error={formErrors.length}
             showText
+            type="numeric"
             simpleText="cm"
           />
           <CustomInput
@@ -176,6 +179,7 @@ const Calculate = () => {
             onChange={(e) => handleChange("weight", e)}
             error={formErrors.weight}
             showText
+            type="numeric"
             simpleText="kg"
           />
         </div>

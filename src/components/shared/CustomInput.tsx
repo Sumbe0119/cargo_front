@@ -7,6 +7,7 @@ interface Props {
   placeholder: string;
   showText?: boolean;
   simpleText?: string;
+  type?: string;
 }
 
 const CustomInput = ({
@@ -16,12 +17,14 @@ const CustomInput = ({
   placeholder,
   showText = false,
   simpleText,
+  type,
 }: Props) => {
   return (
     <div className="relative h-11 border border-gray rounded-xl px-4 outline-none text-sm font-normal">
       <input
         placeholder={placeholder}
         value={value}
+        type={type || "text"}
         onChange={(e) => onChange(e?.target?.value)}
         className="w-full h-full outline-none"
       />

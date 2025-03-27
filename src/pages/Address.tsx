@@ -5,7 +5,7 @@ import moment from "moment";
 
 const Address = () => {
   return (
-    <div className="container xs:px-4 lg:px-0 xs:space-y-3 lg:space-y-12">
+    <div className="simple-container xs:px-4 lg:px-0 xs:space-y-3 lg:space-y-12">
       <h1 className="grid gap-1 leading-3">
         <span className="text-sm font-medium text-black">
           Агуулахын жагсаалт
@@ -14,7 +14,7 @@ const Address = () => {
           Та өөрт тохирох агуулхыг сонгоорой
         </span>
       </h1>
-      <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xs:gap-3 lg:gap-6">
+      <div className="grid xs:grid-cols-1 sm:grid-cols-2 xs:gap-3 lg:gap-6">
         {[1, 2, 3, 4].map((item: any, index: number) => {
           return (
             <Link

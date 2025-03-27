@@ -5,9 +5,11 @@ import MainFooter from "./MainFooter";
 
 const MainLayout = () => {
   return (
-    <div className="xs:space-y-6 lg:space-y-12">
+    <div className="xs:space-y-6 lg:space-y-24">
       <MainHeader />
-      <Outlet />
+      <div className="custom-min-h-screen">
+        <Outlet />
+      </div>
       <div className="h-11"></div>
       <MainFooter />
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { getFormatMoney, getFormatYuan } from "../utils/common";
-import { BoxIcon } from "../assets/icons";
+import { BoxIcon, CarIcon } from "../assets/icons";
 
 interface Props {
   weightPrice: number;
@@ -15,91 +15,91 @@ const CalculateHeader = ({
   calculatePrice,
 }: Props) => {
   return (
-    <div
-      className={`group/item grid xs:grid-cols-2 lg:grid-cols-4 xs:gap-3 lg:gap-6 cursor-pointer`}
-    >
+    <div className="flex-col flex gap-6">
       <div
-        className={`border border-light rounded-xl hover:border-primary px-4 h-20 flex items-center justify-between`}
+        className={`group/item grid xs:grid-cols-1 lg:grid-cols-3 xs:gap-3 lg:gap-6 cursor-pointer`}
       >
-        <div className={`grid`}>
-          <div
-            className={`flex items-center gap-1 text-base font-semibold text-black leading-4`}
-          >
-            1кг ачаа
+        <div
+          className={`border border-light rounded-xl hover:border-primary px-4 h-20 flex items-center justify-between`}
+        >
+          <div className={`grid`}>
+            <div
+              className={`flex items-center gap-1 text-base font-semibold text-black leading-4`}
+            >
+              1кг ачаа
+            </div>
+            <div className={`text-dark font-regular text-sm`}>
+              {getFormatMoney(weightPrice)}
+            </div>
           </div>
-          <div className={`text-dark font-regular text-sm`}>
-            {getFormatMoney(weightPrice)}
+          <div
+            className={`flex-none bg-light/50 group-hover/item:bg-primary/10 w-9 h-9 rounded-full flex items-center justify-center`}
+          >
+            <span
+              className={`stroke-2 stroke-black group-hover/item:stroke-primary`}
+            >
+              <BoxIcon size="16" />
+            </span>
           </div>
         </div>
         <div
-          className={`flex-none bg-light/50 group-hover/item:bg-primary/10 w-9 h-9 rounded-full flex items-center justify-center`}
+          className={`border border-light rounded-xl hover:border-primary px-4 h-20 flex items-center justify-between`}
         >
-          <span
-            className={`stroke-2 stroke-black group-hover/item:stroke-primary`}
-          >
-            <BoxIcon size="16" />
-          </span>
-        </div>
-      </div>
-      <div
-        className={`border border-light rounded-xl hover:border-primary px-4 h-20 flex items-center justify-between`}
-      >
-        <div className={`grid`}>
-          <div
-            className={`flex items-center gap-1 text-base font-semibold text-black leading-4`}
-          >
-            1м3-с доош ачаа
+          <div className={`grid`}>
+            <div
+              className={`flex items-center gap-1 text-base font-semibold text-black leading-4`}
+            >
+              1м3-с доош ачаа
+            </div>
+            <div className={`text-dark font-regular text-sm`}>
+              {" "}
+              {getFormatMoney(Below1m3)}
+            </div>
           </div>
-          <div className={`text-dark font-regular text-sm`}>
-            {" "}
-            {getFormatMoney(Below1m3)}
+          <div
+            className={`flex-none bg-light/50 group-hover/item:bg-primary/10 w-9 h-9 rounded-full flex items-center justify-center`}
+          >
+            <span
+              className={`stroke-2 stroke-black group-hover/item:stroke-primary`}
+            >
+              <BoxIcon size="16" />
+            </span>
           </div>
         </div>
         <div
-          className={`flex-none bg-light/50 group-hover/item:bg-primary/10 w-9 h-9 rounded-full flex items-center justify-center`}
+          className={`border border-light rounded-xl hover:border-primary px-4 h-20 flex items-center justify-between`}
         >
-          <span
-            className={`stroke-2 stroke-black group-hover/item:stroke-primary`}
+          <div className={`grid`}>
+            <div
+              className={`flex items-center gap-1 text-base font-semibold text-black leading-4`}
+            >
+              1м3-с дээш ачаа
+            </div>
+            <div className={`text-dark font-regular text-sm`}>
+              {getFormatYuan(Above1m3)}
+            </div>
+          </div>
+          <div
+            className={`flex-none bg-light/50 group-hover/item:bg-primary/10 w-9 h-9 rounded-full flex items-center justify-center`}
           >
-            <BoxIcon size="16" />
-          </span>
+            <span
+              className={`stroke-2 stroke-black group-hover/item:stroke-primary`}
+            >
+              <BoxIcon size="16" />
+            </span>
+          </div>
         </div>
       </div>
       <div
-        className={`border border-light rounded-xl hover:border-primary px-4 h-20 flex items-center justify-between`}
+        className={`bg-primary/10 rounded-xl hover:border-primary px-4 py-5 flex-col flex gap-px`}
       >
-        <div className={`grid`}>
-          <div
-            className={`flex items-center gap-1 text-base font-semibold text-black leading-4`}
-          >
-            1м3-с дээш ачаа
-          </div>
-          <div className={`text-dark font-regular text-sm`}>
-            {getFormatYuan(Above1m3)}
-          </div>
-        </div>
-        <div
-          className={`flex-none bg-light/50 group-hover/item:bg-primary/10 w-9 h-9 rounded-full flex items-center justify-center`}
-        >
-          <span
-            className={`stroke-2 stroke-black group-hover/item:stroke-primary`}
-          >
-            <BoxIcon size="16" />
+        <div className="text-primary font-medium flex gap-3">
+          <span className="stroke-primary">
+            <CarIcon />
           </span>
+          <p className="">Тээврийн зардал</p>
         </div>
-      </div>
-      <div
-        className={`bg-primary/10 rounded-xl hover:border-primary px-4 h-20 flex items-center justify-between`}
-      >
-        <div className={`grid`}>
-          <div
-            className={`flex items-center gap-1 text-base font-semibold text-primary leading-4`}
-          >
-            {/* {getFormatMoney(16000)} */}
-            {calculatePrice}₮
-          </div>
-          <div className={`text-primary font-regular text-sm`}>Нийт зардал</div>
-        </div>
+        <p className="text-lg font-semibold text-dark">{calculatePrice}₮</p>
       </div>
     </div>
   );

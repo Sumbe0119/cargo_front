@@ -7,6 +7,15 @@ textarea {
   touch-action: manipulation;
 }
 .container {
-  max-width: 1024px;
+  max-width: 1320px;
   margin: 0 auto;
 }
+.simple-container {
+  max-width: 728px;
+  margin: 0 auto;
+}
+
+.custom-min-h-screen {
+  min-height: calc(100vh - 470px);
+}
+
