@@ -5,11 +5,13 @@ import {
   CalculateIcon,
   HomeIcon,
   LoginIcon,
+  MenuIcon,
   UserIcon,
 } from "../assets/icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import LoginModal from "../shared/LoginModal";
 import { useMediaQuery } from "react-responsive";
+import LeftSideMenu from "./LeftSideMenu";
 
 const menus = [
   // { title: "Бидний тухай", link: "/about" },
@@ -23,11 +25,25 @@ const MainHeader = () => {
   const user = localStorage.getItem("user");
 
   const [visible, setVisible] = useState(false);
+  const [drawer, setDrawer] = useState(false);
   const navigate = useNavigate();
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+  const renderTitle = () => {
+    switch (pathname) {
+      case "/":
+        return "Нүүр";
+      case "/calculate":
+        return "Тооцоолуур";
+      case "/address":
+        return "Хаяг холбох";
+      case "/profile":
+        return "Профайл";
+    }
+  };
   return (
     <>
-      <header className="sticky w-full top-0 bg-white z-10 h-auto border-b border-b-light py-3">
+      <header className="sticky w-full flex items-center top-0 bg-white z-10 h-[69px] border-b border-b-light py-3">
         <div className="text-sm container mx-auto flex items-center justify-between xs:px-2 2xl:px-0">
           <div className="container flex items-center justify-between">
             <div className="flex items-center gap-6 xs:px-4 lg:px-0">
@@ -76,6 +92,23 @@ const MainHeader = () => {
                   );
                 })}
               </ul>
+              {/* mobile header start */}
+              <div className="xs:flex lg:hidden items-center gap-3">
+                <div
+                  onClick={() => setDrawer(!drawer)}
+                  className={`${
+                    ["/", "/calculate", "/address"].includes(pathname)
+                      ? "xs:block"
+                      : "hidden"
+                  } `}
+                >
+                  <MenuIcon />
+                </div>
+                <div className="text-dm font-semibold text-black">
+                  {renderTitle()}
+                </div>
+              </div>
+              {/* mobile header end */}
             </div>
             {user ? (
               <div
@@ -91,7 +124,7 @@ const MainHeader = () => {
             ) : (
               <Link
                 to="/profile"
-                className="stroke-dark flex items-center gap-2 h-11 px-6 border border-dark/50 rounded-2xl hover:bg-dark/10 cursor-pointer"
+                className={`stroke-dark ${pathname.startsWith('/profile') ? 'hidden': 'flex'} items-center gap-2 h-11 px-6 border border-dark/50 rounded-2xl hover:bg-dark/10 cursor-pointer`}
               >
                 <span className={`stroke-2`}>
                   <UserIcon size={"18"} />
@@ -157,6 +190,7 @@ const MainHeader = () => {
         </Link>
       </footer>
       <LoginModal open={visible} onClose={() => setVisible(false)} />
+      <LeftSideMenu open={drawer} onClose={() => setDrawer(false)} />
     </>
   );
 };

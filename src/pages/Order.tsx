@@ -13,9 +13,9 @@ const Order = () => {
   const [select, setSelect] = React.useState<string>("Бүгд");
 
   return (
-    <div className="flex flex-col gap-6 w-full">
+    <div className="flex flex-col gap-6 w-full xs:px-6">
       <h2 className="text-lg font-semibold text-primary">Барааны төлөв</h2>
-      <div className="flex items-center gap-3">
+      <div className="xs:grid xs:grid-cols-3 lg:flex items-center gap-3">
         {list?.map((item, index) => {
           const isActive = select === item?.title;
           return (
@@ -37,7 +37,7 @@ const Order = () => {
           );
         })}
       </div>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid xs:grid-cols-1 lg:grid-cols-3 gap-3">
         {[1, 2, 3, 4, 5, 6].map((index) => {
           return (
             <div

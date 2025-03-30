@@ -11,6 +11,7 @@ import Profile from "../pages/Profile";
 import Order from "../pages/Order";
 import PasswordChange from "../pages/PasswordChange";
 import ProfileLayout from "../components/layout/ProfileLayout";
+import Notfound from "../components/layout/Notfound";
 
 const AppRoutes = () => {
   return (
@@ -29,6 +30,9 @@ const AppRoutes = () => {
               <Route path="order" element={<Order />} />
               <Route path="password" element={<PasswordChange />} />
             </Route>
+            <Route path="/profile/mobile" element={<Profile />} />
+            <Route path="/order" element={<Order />} />
+            <Route path="*" element={<Notfound />} />
           </Route>
         </Routes>
       </Suspense>

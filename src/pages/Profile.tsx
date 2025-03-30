@@ -17,7 +17,7 @@ const Profile = () => {
   const [address, setAddress] = useState(false);
   return (
     <>
-      <div className="flex flex-col gap-6 w-full">
+      <div className="flex flex-col gap-6 w-full xs:px-6 lg:px-0">
         <h2 className="text-lg font-semibold text-primary">Үндсэн мэдээлэл</h2>
         <div className="border border-light rounded-lg py-4 space-y-3">
           <div className="flex items-center justify-between border-b border-b-light pb-3 px-4">
@@ -28,7 +28,7 @@ const Profile = () => {
                   <GeneralIcon size="18" />
                 </span>
               </h2>
-              <p className="text-sm leading-tight font-light text-dark mt-1">
+              <p className="xs:w-[200px] sm:w-[300px] text-sm leading-tight font-light text-dark mt-1">
                 Та хүргэлтийн хаягаа оруулснаар захиалга хийхдээ тухайн хаягийг
                 хялбар ашиглах боломжтой
               </p>
@@ -43,7 +43,7 @@ const Profile = () => {
               Мэдээлэл засварлах
             </div>
           </div>
-          <div className="grid grid-cols-4 px-4">
+          <div className="grid xs:grid-cols-2 lg:grid-cols-4 px-4">
             <div className="block space-y-2">
               <label className="text-xs text-dark/70">Овог</label>
               <div className="flex gap-3">
@@ -95,7 +95,7 @@ const Profile = () => {
                   <AddressIcon size="18" />
                 </span>
               </h2>
-              <p className="text-sm leading-tight font-light text-dark mt-1">
+              <p className="xs:w-[200px] sm:w-[300px] md:w-full lg:w-full text-sm leading-tight font-light text-dark mt-1">
                 Та хүргэлтийн хаягаа оруулснаар захиалга хийхдээ тухайн хаягийг
                 хялбар ашиглах боломжтой
               </p>
