@@ -4,6 +4,7 @@ import {
   ArrowIcon,
   CalculateIcon,
   HomeIcon,
+  LoginIcon,
   UserIcon,
 } from "../assets/icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -19,6 +20,8 @@ const menus = [
 
 const MainHeader = () => {
   const { pathname } = useLocation();
+  const user = localStorage.getItem("user");
+
   const [visible, setVisible] = useState(false);
   const navigate = useNavigate();
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -74,16 +77,28 @@ const MainHeader = () => {
                 })}
               </ul>
             </div>
-            <div
-              onClick={() => setVisible(true)}
-              className="text-white stroke-white hover:text-primary hover:stroke-primary transition-text hover:bg-primary/10 
+            {user ? (
+              <div
+                onClick={() => setVisible(true)}
+                className="text-white stroke-white hover:text-primary hover:stroke-primary transition-text hover:bg-primary/10 
         hover:border-primary/10 bg-primary border border-primary rounded-2xl flex items-center h-11 px-6 gap-2 cursor-pointer"
-            >
-              <span className={`stroke-2`}>
-                <UserIcon size={"16"} />
-              </span>
-              <span className="font-medium leading-none">Нэвтрэх</span>
-            </div>
+              >
+                <span className={`stroke-2`}>
+                  <LoginIcon size={"18"} />
+                </span>
+                <span className="font-medium leading-none">Нэвтрэх</span>
+              </div>
+            ) : (
+              <Link
+                to="/profile"
+                className="stroke-dark flex items-center gap-2 h-11 px-6 border border-dark/50 rounded-2xl hover:bg-dark/10 cursor-pointer"
+              >
+                <span className={`stroke-2`}>
+                  <UserIcon size={"18"} />
+                </span>
+                <span className="font-medium leading-none">Сүмбэ</span>
+              </Link>
+            )}
           </div>
         </div>
       </header>

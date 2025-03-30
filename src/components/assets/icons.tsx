@@ -47,6 +47,78 @@ export const UserIcon = ({ size }: Props) => {
     </svg>
   );
 };
+export const User2Icon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "22"}
+      height={size || "22"}
+      fill="none"
+      viewBox="0 0 22 22"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M3 20.817C3.603 21 4.416 21 5.8 21h10.4c1.384 0 2.197 0 2.8-.183m-16 0a2 2 0 0 1-.362-.144 3 3 0 0 1-1.311-1.311C1 18.72 1 17.88 1 16.2V5.8c0-1.68 0-2.52.327-3.162a3 3 0 0 1 1.311-1.311C3.28 1 4.12 1 5.8 1h10.4c1.68 0 2.52 0 3.162.327a3 3 0 0 1 1.311 1.311C21 3.28 21 4.12 21 5.8v10.4c0 1.68 0 2.52-.327 3.162a3 3 0 0 1-1.311 1.311 2 2 0 0 1-.362.144m-16 0c0-.809.005-1.237.077-1.597a4 4 0 0 1 3.143-3.143C6.606 16 7.07 16 8 16h6c.93 0 1.394 0 1.78.077a4 4 0 0 1 3.143 3.143c.072.36.077.788.077 1.597M15 8.5a4 4 0 1 1-8 0 4 4 0 0 1 8 0"
+      ></path>
+    </svg>
+  );
+};
+export const EmailIcon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "22"}
+      height={size || "18"}
+      fill="none"
+      viewBox="0 0 22 18"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="m1 4 8.165 5.715c.661.463.992.695 1.351.784a2 2 0 0 0 .968 0c.36-.09.69-.32 1.351-.784L21 4M5.8 17h10.4c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.311-1.311C21 14.72 21 13.88 21 12.2V5.8c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C18.72 1 17.88 1 16.2 1H5.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C1 3.28 1 4.12 1 5.8v6.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311C3.28 17 4.12 17 5.8 17"
+      ></path>
+    </svg>
+  );
+};
+export const UserEditIcon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "22"}
+      height={size || "20"}
+      fill="none"
+      viewBox="0 0 22 20"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M8 13.5H6.5c-1.396 0-2.093 0-2.661.172a4 4 0 0 0-2.667 2.667C1 16.907 1 17.604 1 19M13.5 5.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0M10 19l3.101-.886c.149-.043.223-.064.292-.096a1 1 0 0 0 .175-.102c.061-.045.116-.1.225-.21l6.457-6.456a1.768 1.768 0 1 0-2.5-2.5l-6.457 6.457c-.11.11-.164.164-.209.225a1 1 0 0 0-.102.175 2 2 0 0 0-.096.292z"
+      ></path>
+    </svg>
+  );
+};
+export const LoginIcon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "22"}
+      height={size || "20"}
+      fill="none"
+      viewBox="0 0 22 20"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="m18 19 3-3m0 0-3-3m3 3h-6m-4-2.5H6.5c-1.396 0-2.093 0-2.661.172a4 4 0 0 0-2.667 2.667C1 16.907 1 17.604 1 19M13.5 5.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0"
+      ></path>
+    </svg>
+  );
+};
 export const WareHouseIcon = ({ size }: Props) => {
   return (
     <svg
@@ -66,11 +138,11 @@ export const WareHouseIcon = ({ size }: Props) => {
   );
 };
 
-export const HomeIcon = () => {
+export const HomeIcon = ({ size }: Props) => {
   return (
     <svg
-      width="24"
-      height="24"
+      width={size || "24"}
+      height={size || "24"}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -87,12 +159,30 @@ export const HomeIcon = () => {
     </svg>
   );
 };
-export const AddressIcon = () => {
+export const JobIcon = ({ size }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="22"
-      height="22"
+      width={size || "22"}
+      height={size || "20"}
+      fill="none"
+      viewBox="0 0 22 20"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M7 19V5c0-.93 0-1.395.102-1.776a3 3 0 0 1 2.122-2.122C9.605 1 10.07 1 11 1s1.395 0 1.777.102a3 3 0 0 1 2.12 2.122C15 3.605 15 4.07 15 5v6.5m0 4V19m-9.2 0h10.4c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.311-1.311C21 16.72 21 15.88 21 14.2V9.8c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C18.72 5 17.88 5 16.2 5H5.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C1 7.28 1 8.12 1 9.8v4.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311C3.28 19 4.12 19 5.8 19m6-3.5h4.9c.28 0 .42 0 .527-.055a.5.5 0 0 0 .218-.218c.055-.107.055-.247.055-.527v-2.4c0-.28 0-.42-.055-.527a.5.5 0 0 0-.218-.218c-.107-.055-.247-.055-.527-.055h-4.9c-.28 0-.42 0-.527.055a.5.5 0 0 0-.218.218C11 11.88 11 12.02 11 12.3v2.4c0 .28 0 .42.055.527a.5.5 0 0 0 .218.218c.107.055.247.055.527.055"
+      ></path>
+    </svg>
+  );
+};
+export const AddressIcon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "22"}
+      height={size || "22"}
       fill="none"
       viewBox="0 0 22 22"
     >
@@ -321,8 +411,8 @@ export const LocationIcon = ({ size }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="22"
+      width={size || "18"}
+      height={size || "22"}
       fill="none"
       viewBox="0 0 18 22"
     >
@@ -337,6 +427,48 @@ export const LocationIcon = ({ size }: Props) => {
         strokeLinejoin="round"
         strokeWidth="2"
         d="M9 21c4-4 8-7.582 8-12A8 8 0 1 0 1 9c0 4.418 4 8 8 12"
+      ></path>
+    </svg>
+  );
+};
+export const PasswordIcon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      viewBox="0 0 20 20"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M14.2 19c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.311-1.311C19 16.72 19 15.88 19 14.2V5.8c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C16.72 1 15.88 1 14.2 1H5.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C1 3.28 1 4.12 1 5.8v8.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311C3.28 19 4.12 19 5.8 19z"
+      ></path>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M11.732 11.195c-.071-.212-.106-.318-.104-.404a.4.4 0 0 1 .056-.22c.04-.077.146-.176.36-.374a3 3 0 1 0-4.086 0c.212.198.319.297.358.374.042.08.054.129.056.22.002.086-.033.192-.104.404l-.917 2.752c-.119.356-.178.533-.142.675a.5.5 0 0 0 .216.3c.123.078.31.078.685.078h3.78c.375 0 .562 0 .685-.078a.5.5 0 0 0 .216-.3c.036-.142-.024-.32-.142-.675z"
+      ></path>
+    </svg>
+  );
+};
+export const GeneralIcon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "21"}
+      height={size || "22"}
+      fill="none"
+      viewBox="0 0 21 22"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="m19.153 9.9-9.016 9.015a5.25 5.25 0 0 1-7.425-7.425l9.016-9.015a3.5 3.5 0 1 1 4.95 4.95l-8.662 8.662a1.75 1.75 0 1 1-2.475-2.475l7.601-7.602"
       ></path>
     </svg>
   );

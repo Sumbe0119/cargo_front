@@ -7,6 +7,10 @@ import Calculate from "../pages/Calculate";
 import Address from "../pages/Address";
 import Terms from "../pages/Terms";
 import BranchSingle from "../pages/BranchSingle";
+import Profile from "../pages/Profile";
+import Order from "../pages/Order";
+import PasswordChange from "../pages/PasswordChange";
+import ProfileLayout from "../components/layout/ProfileLayout";
 
 const AppRoutes = () => {
   return (
@@ -20,6 +24,11 @@ const AppRoutes = () => {
             <Route path="/address" element={<Address />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/branch/:id" element={<BranchSingle />} />
+            <Route path="/profile" element={<ProfileLayout />}>
+              <Route index element={<Profile />} />
+              <Route path="order" element={<Order />} />
+              <Route path="password" element={<PasswordChange />} />
+            </Route>
           </Route>
         </Routes>
       </Suspense>
