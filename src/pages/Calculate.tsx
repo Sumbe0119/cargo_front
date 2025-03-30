@@ -152,7 +152,7 @@ const Calculate = () => {
             onChange={(e) => handleChange("width", e)}
             error={formErrors.width}
             showText
-            type="numeric"
+            inputMode="numeric"
             simpleText="cm"
           />
           <CustomInput
@@ -161,7 +161,7 @@ const Calculate = () => {
             onChange={(e) => handleChange("height", e)}
             error={formErrors.height}
             showText
-            type="numeric"
+            inputMode="numeric"
             simpleText="cm"
           />
           <CustomInput
@@ -170,7 +170,7 @@ const Calculate = () => {
             onChange={(e) => handleChange("length", e)}
             error={formErrors.length}
             showText
-            type="numeric"
+            inputMode="numeric"
             simpleText="cm"
           />
           <CustomInput
@@ -179,7 +179,7 @@ const Calculate = () => {
             onChange={(e) => handleChange("weight", e)}
             error={formErrors.weight}
             showText
-            type="numeric"
+            inputMode="numeric"
             simpleText="kg"
           />
         </div>

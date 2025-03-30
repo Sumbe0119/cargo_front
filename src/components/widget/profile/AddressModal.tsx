@@ -35,7 +35,7 @@ const AddressModal = ({ open, onClose }: Props) => {
       <div className="xs:w-full lg:w-[700px]">
         <div className="flex items-center justify-between border-b border-b-light py-4 px-5">
           <h1 className="text-md text-black font-medium">Шинэ хаяг оруулах</h1>
-          <span className={`fill-black`}>
+          <span onClick={() => onClose()} className={`fill-black`}>
             <CloseIcon />
           </span>
         </div>

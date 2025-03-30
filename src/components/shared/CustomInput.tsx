@@ -10,6 +10,8 @@ interface Props {
   type?: string;
   containerClass?: string;
   label?: string;
+  inputMode?: any;
+
 }
 
 const CustomInput = ({
@@ -22,6 +24,7 @@ const CustomInput = ({
   type,
   containerClass,
   label,
+  inputMode
 }: Props) => {
   return (
     <div>
@@ -35,6 +38,7 @@ const CustomInput = ({
           placeholder={placeholder}
           value={value}
           type={type || "text"}
+          inputMode={inputMode || "text"}
           onChange={(e) => onChange(e?.target?.value)}
           className="w-full h-full outline-none"
         />

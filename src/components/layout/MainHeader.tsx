@@ -43,22 +43,11 @@ const MainHeader = () => {
   };
   return (
     <>
-      <header className="sticky w-full flex items-center top-0 bg-white z-10 h-[69px] border-b border-b-light py-3">
+      {/* desktop header start */}
+      <header className="xs:hidden lg:flex sticky w-full items-center top-0 bg-white z-10 h-[69px] border-b border-b-light py-3">
         <div className="text-sm container mx-auto flex items-center justify-between xs:px-2 2xl:px-0">
           <div className="container flex items-center justify-between">
             <div className="flex items-center gap-6 xs:px-4 lg:px-0">
-              {isMobile ? (
-                <div
-                  onClick={() => navigate(-1)}
-                  className={`${
-                    (pathname === "/" && "hidden") ||
-                    (pathname === "/calculate" && "hidden") ||
-                    (pathname === "/address" && "hidden")
-                  } fill-white stroke-1 stroke-black h-9 w-9 flex items-center justify-center border border-light rounded-lg pr-1 cursor-pointer z-20`}
-                >
-                  <ArrowIcon size="22" />
-                </div>
-              ) : null}
               <ul className="xs:hidden lg:flex items-center font-semibold gap-4 divide-x divide-x-dark">
                 <li>
                   <Link
@@ -92,23 +81,6 @@ const MainHeader = () => {
                   );
                 })}
               </ul>
-              {/* mobile header start */}
-              <div className="xs:flex lg:hidden items-center gap-3">
-                <div
-                  onClick={() => setDrawer(!drawer)}
-                  className={`${
-                    ["/", "/calculate", "/address"].includes(pathname)
-                      ? "xs:block"
-                      : "hidden"
-                  } `}
-                >
-                  <MenuIcon />
-                </div>
-                <div className="text-dm font-semibold text-black">
-                  {renderTitle()}
-                </div>
-              </div>
-              {/* mobile header end */}
             </div>
             {user ? (
               <div
@@ -124,7 +96,7 @@ const MainHeader = () => {
             ) : (
               <Link
                 to="/profile"
-                className={`stroke-dark ${pathname.startsWith('/profile') ? 'hidden': 'flex'} items-center gap-2 h-11 px-6 border border-dark/50 rounded-2xl hover:bg-dark/10 cursor-pointer`}
+                className="stroke-dark flex items-center gap-2 h-11 px-6 border border-dark/50 rounded-2xl hover:bg-dark/10 cursor-pointer"
               >
                 <span className={`stroke-2`}>
                   <UserIcon size={"18"} />
@@ -135,13 +107,43 @@ const MainHeader = () => {
           </div>
         </div>
       </header>
+      {/* desktop header end */}
+      {/* mobile header start */}
+
+      <header className="xs:flex lg:hidden items-center justify-between border-b border-light sticky w-full top-0 z-10 h-[54px] px-4 bg-white">
+        <div
+          onClick={() => navigate(-1)}
+          className={`${
+            (pathname === "/" && "hidden") ||
+            (pathname === "/calculate" && "hidden") ||
+            (pathname === "/address" && "hidden") ||
+            (pathname === "/profile" && "hidden")
+          } fill-white stroke-1 stroke-black h-9 w-9 flex items-center justify-center border border-light rounded-lg pr-1 cursor-pointer z-20`}
+        >
+          <ArrowIcon size="22" />
+        </div>
+        <p className="text-dm font-semibold text-black">{renderTitle()}</p>
+
+        <div
+          onClick={() => setDrawer(!drawer)}
+          className={`${
+            ["/", "/calculate", "/address"].includes(pathname)
+              ? "xs:block"
+              : "hidden"
+          }xs:block lg:hidden pr-3`}
+        >
+          <MenuIcon />
+        </div>
+      </header>
+      {/* mobile header end */}
+
       {/* <div className="xs:h-16 lg:h-28"></div> */}
       <footer
         className={`${
-          ["/", "/calculate", "/address"].includes(pathname)
+          ["/", "/calculate", "/address", "/profile"].includes(pathname)
             ? "xs:grid"
             : "hidden"
-        } grid-cols-3 lg:hidden fixed !bg-white z-10 bottom-0 border-t border-t-light h-16 w-full items-center justify-evenly`}
+        } grid-cols-4 lg:hidden fixed !bg-white z-10 bottom-0 border-t border-t-light h-16 w-full items-center justify-evenly`}
       >
         <Link
           to={`/`}
@@ -188,6 +190,39 @@ const MainHeader = () => {
           </span>
           Хаяг холбох
         </Link>
+        {user ? (
+          <div
+            onClick={() => setVisible(true)}
+            className={`flex-col flex items-center gap-px text-xs font-regular ${
+              pathname === "/address" ? "text-primary" : "text-dark"
+            }`}
+          >
+            <span
+              className={`flex items-center stroke-2 px-4 ${
+                pathname === "/address" ? "stroke-primary" : "stroke-dark"
+              } transition-all hover:stroke-primary`}
+            >
+              <LoginIcon />
+            </span>
+            Нэвтрэх
+          </div>
+        ) : (
+          <Link
+            to={`/profile`}
+            className={`flex-col flex items-center gap-px text-xs font-regular ${
+              pathname === "/profile" ? "text-primary" : "text-dark"
+            }`}
+          >
+            <span
+              className={`flex items-center stroke-2 px-4 ${
+                pathname === "/profile" ? "stroke-primary" : "stroke-dark"
+              } transition-all hover:stroke-primary`}
+            >
+              <UserIcon size="22" />
+            </span>
+            <p className="truncate max-w-[70px]">Сүмбэ ssssssdasdasda</p>
+          </Link>
+        )}
       </footer>
       <LoginModal open={visible} onClose={() => setVisible(false)} />
       <LeftSideMenu open={drawer} onClose={() => setDrawer(false)} />

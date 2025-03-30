@@ -17,16 +17,16 @@ const UserInfoEditModal = ({ open, onClose }: Props) => {
   };
   return (
     <Modal onClose={onClose} open={open}>
-      <div className="w-[500px]">
-        <div className="flex items-center justify-between border-b border-b-light py-4 px-5">
+      <div className="xs:w-full lg:w-[500px] ">
+        <div className="flex items-center justify-between border-b border-b-light py-4 px-5 w-screen">
           <h1 className="text-md text-black font-medium">
             Хэрэглэчийн мэдээлэл
           </h1>
-          <span className={`fill-black`}>
+          <span onClick={() => onClose()} className={`fill-black`}>
             <CloseIcon />
           </span>
         </div>
-        <div className="grid grid-cols-1 gap-3 px-6 pt-4 pb-6">
+        <div className="grid grid-cols-1 gap-3 px-6 pt-4 pb-6 ">
           <CustomInput
             onChange={() => console.info("object")}
             placeholder="First name"

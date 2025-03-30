@@ -3,10 +3,10 @@ import { useLocation } from "react-router-dom";
 
 const list = [
   { id: 1, title: "Бүгд" },
-  { id: 2, title: "Хүлээгдэж буй" },
   { id: 3, title: "Эрээн агуулах" },
   { id: 4, title: "Замд гарсан" },
   { id: 5, title: "Улаанбатар агуулах" },
+  { id: 5, title: "Хүлээн авсан" },
 ];
 const Order = () => {
   const { pathname } = useLocation();
@@ -15,7 +15,7 @@ const Order = () => {
   return (
     <div className="flex flex-col gap-6 w-full xs:px-6">
       <h2 className="text-lg font-semibold text-primary">Барааны төлөв</h2>
-      <div className="xs:grid xs:grid-cols-3 lg:flex items-center gap-3">
+      <div className="xs:grid xs:grid-cols-2 lg:flex items-center gap-3">
         {list?.map((item, index) => {
           const isActive = select === item?.title;
           return (
