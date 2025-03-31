@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="container xs:px-4 lg:px-0">
+      <div className="container xs:px-4 lg:px-0 xs:mt-6 lg:mt-12">
         <div className="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="xs:flex md:hidden lg:flex flex-col gap-6">
             <h1 className="grid gap-1">

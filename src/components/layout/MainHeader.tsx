@@ -220,7 +220,7 @@ const MainHeader = () => {
             >
               <UserIcon size="22" />
             </span>
-            <p className="truncate max-w-[70px]">Сүмбэ ssssssdasdasda</p>
+            <p className="truncate max-w-[70px]">Профайл</p>
           </Link>
         )}
       </footer>

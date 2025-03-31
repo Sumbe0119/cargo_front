@@ -5,7 +5,7 @@ import moment from "moment";
 
 const Address = () => {
   return (
-    <div className="simple-container xs:px-4 lg:px-0 xs:space-y-3 lg:space-y-12">
+    <div className="simple-container xs:px-4 lg:px-0 xs:space-y-3 lg:space-y-12 xs:mt-6 lg:mt-12">
       <h1 className="grid gap-1 leading-3">
         <span className="text-sm font-medium text-black">
           Агуулахын жагсаалт

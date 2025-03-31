@@ -7,7 +7,7 @@ import {
   ListboxOptions,
 } from "@headlessui/react";
 import CustomInput from "../components/shared/CustomInput";
-import CalculateHeader from "../components/widget/CalculateHeader";
+import CalculateHeader from "../components/widget/calculate/CalculateHeader";
 
 const WAREHOUSES = [
   { name: "Эрээн агуулах", id: 1 },
@@ -96,7 +96,7 @@ const Calculate = () => {
   }, [price]);
 
   return (
-    <div className="simple-container xs:px-4 lg:px-0 xs:space-y-3 lg:space-y-12">
+    <div className="simple-container xs:px-4 lg:px-0 xs:space-y-3 lg:space-y-12 xs:mt-6 lg:mt-12">
       {/* Агуулах сонгох хэсэг */}
       <div className="flex items-start justify-between">
         <h1 className="grid gap-1 leading-3">
@@ -182,6 +182,49 @@ const Calculate = () => {
             inputMode="numeric"
             simpleText="kg"
           />
+        </div>
+      </div>
+      <div className="flex-col flex gap-5 items-start text-dark font-regular">
+        <div className="grid gap-3 leading-none text-base text-black font-semibold">
+          <p>Барааны овор</p>
+          <span className="text-dark font-normal text-sm">
+            (Урт * Өргөн * Өндөр) / 1000000 * 1м3 үнэлгээ
+          </span>
+        </div>
+        <div className="grid gap-3 leading-none text-base text-black font-semibold">
+          <p>Барааны жин</p>
+          <span className="text-dark font-normal text-sm">
+            Барааны жин * 1кг үнэлгээ
+          </span>
+        </div>
+        <div className="grid gap-3 leading-none text-base text-black font-semibold">
+          <p>Тээврийн зардал бодох аргачлал</p>
+          <ul className="text-dark font-normal text-sm list-disc pl-5 grid gap-2">
+            <li>
+              {" "}
+              0-1кг хүртэл = 3,000 ₮ нэмэгдэх 1 кг тутамд 3,000 ₮, 1м3 = 599¥
+            </li>
+            <li>
+              {" "}
+              Тусдаа ирсэн болон өөр дэлгүүрийн барааг тус тусад нь бодно
+            </li>
+            <li>
+              {" "}
+              Овор ихтэй ууттай куртик, хөнжил гэх мэт зүйлс овор хэмжээнээсээ
+              хамаараад ойролцоогоор 5000₮-10000₮ хооронд байдаг.
+            </li>
+            <li>Гутлын хайрцаг 4000₮-8000₮ хооронд</li>
+          </ul>
+        </div>
+        <div className="grid gap-3 leading-none text-base text-black font-semibold">
+          <p>Жингээр бодох уу?, овроор бодох уу?</p>
+          <span className="text-dark font-normal text-sm">
+            Таны захиалсан бараа харьцангуй хүнд боловч жижиг хэмжээтэй бол
+            жингээр тээврийн зардлыг тооцоолно. (Үүнийг төмөр туухайтай зүйрлэж
+            ойлгож болно.) Хэрэв таны бараа хөнгөн боловч овор хэмжээ нь
+            харьцангуй том байвал овор хэмжээгээр тээврийн зардлыг бодно.
+            (Үүнийг хөнгөн унадаг дугуйтай зүйрлэж ойлгож болно.)
+          </span>
         </div>
       </div>
     </div>

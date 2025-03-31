@@ -43,7 +43,10 @@ const BranchSingle = () => {
               </span>
               <p>烸嵪 (Өөрийн утасны дугаар)</p>
             </div>
-            <span className="stroke stroke-primary">
+            <span
+              onClick={() => toast.success("Хаяг амжилттай хуулсан")}
+              className="stroke stroke-primary"
+            >
               <CopyIcon />
             </span>
           </div>
@@ -57,7 +60,10 @@ const BranchSingle = () => {
               </span>
               <p>15847901990</p>
             </div>
-            <span className="stroke stroke-primary">
+            <span
+              onClick={() => toast.success("Хаяг амжилттай хуулсан")}
+              className="stroke stroke-primary"
+            >
               <CopyIcon />
             </span>
           </div>
@@ -73,7 +79,10 @@ const BranchSingle = () => {
               </span>
               <p>内蒙古自治区 锡林郭勒盟 二连浩特市社区建设管理局</p>
             </div>
-            <span className="stroke stroke-primary">
+            <span
+              onClick={() => toast.success("Хаяг амжилттай хуулсан")}
+              className="stroke stroke-primary"
+            >
               <CopyIcon />
             </span>
           </div>
@@ -89,7 +98,10 @@ const BranchSingle = () => {
               </span>
               <p>浩特汇通物流园区C05号 (Өөрийн утасны дугаар)</p>
             </div>
-            <span className="stroke stroke-primary">
+            <span
+              onClick={() => toast.success("Хаяг амжилттай хуулсан")}
+              className="stroke stroke-primary"
+            >
               <CopyIcon />
             </span>
           </div>
@@ -103,7 +115,10 @@ const BranchSingle = () => {
               </span>
               <p>011100</p>
             </div>
-            <span className="stroke stroke-primary">
+            <span
+              onClick={() => toast.success("Хаяг амжилттай хуулсан")}
+              className="stroke stroke-primary"
+            >
               <CopyIcon />
             </span>
           </div>

@@ -16,6 +16,5 @@ textarea {
 }
 
 .custom-min-h-screen {
-  min-height: calc(100vh - 470px);
+  height: calc(100vh - 190px);
 }
-

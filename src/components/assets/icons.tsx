@@ -487,7 +487,79 @@ export const MenuIcon = ({ size }: Props) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
-        d="M3 12h18M3 6h18M3 18h12"
+        d="M3 12h18M3 6h18M3 18h18"
+      ></path>
+    </svg>
+  );
+};
+export const SuccessIcon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="19"
+      height="22"
+      fill="none"
+      viewBox="0 0 19 22"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M17 11.5V5.8c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C14.72 1 13.88 1 12.2 1H5.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C1 3.28 1 4.12 1 5.8v10.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311C3.28 21 4.12 21 5.8 21H9m2-11H5m2 4H5m8-8H5m6.5 12 2 2 4.5-4.5"
+      ></path>
+    </svg>
+  );
+};
+export const TrakCodeIcon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "20"}
+      height={size || "20"}
+      fill="none"
+      viewBox="0 0 20 20"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M6 1h-.2c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C1 3.28 1 4.12 1 5.8V6m5 13h-.2c-1.68 0-2.52 0-3.162-.327a3 3 0 0 1-1.311-1.311C1 16.72 1 15.88 1 14.2V14m18-8v-.2c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C16.72 1 15.88 1 14.2 1H14m5 13v.2c0 1.68 0 2.52-.327 3.162a3 3 0 0 1-1.311 1.311C16.72 19 15.88 19 14.2 19H14M1 10h.01m4.49 0h.01m8.99 0h.01M10 10h.01M19 10h.01"
+      ></path>
+    </svg>
+  );
+};
+export const CalendarIcon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "20"}
+      height={size || "20"}
+      fill="none"
+      viewBox="0 0 20 22"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M19 9H1m18 2.5V7.8c0-1.68 0-2.52-.327-3.162a3 3 0 0 0-1.311-1.311C16.72 3 15.88 3 14.2 3H5.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C1 5.28 1 6.12 1 7.8v8.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311C3.28 21 4.12 21 5.8 21H10m4-20v4M6 1v4m6.5 13 2 2 4.5-4.5"
+      ></path>
+    </svg>
+  );
+};
+export const WalletIcon = ({ size }: Props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size || "20"}
+      height={size || "21"}
+      fill="none"
+      viewBox="0 0 20 21"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M14 7V3.5c0-.831 0-1.247-.175-1.503a1 1 0 0 0-.657-.42c-.306-.052-.683.122-1.438.47L2.858 6.143c-.673.31-1.01.466-1.257.707a2 2 0 0 0-.487.76C1 7.936 1 8.307 1 9.048V14m13.5-.5h.01M1 10.2v6.6c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874C2.52 20 3.08 20 4.2 20h11.6c1.12 0 1.68 0 2.108-.218a2 2 0 0 0 .874-.874C19 18.48 19 17.92 19 16.8v-6.6c0-1.12 0-1.68-.218-2.108a2 2 0 0 0-.874-.874C17.48 7 16.92 7 15.8 7H4.2c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C1 8.52 1 9.08 1 10.2m14 3.3a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"
       ></path>
     </svg>
   );

@@ -9,10 +9,11 @@ const MainLayout = () => {
     <div className={``}>
       <MainHeader />
       <div className="custom-min-h-screen">
-        <Outlet />
+        <div className="pb-16">
+          <Outlet />
+        </div>
+        {/* <MainFooter /> */}
       </div>
-      <div className="h-11"></div>
-      <MainFooter />
     </div>
   );
 };
