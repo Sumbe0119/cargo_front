@@ -124,7 +124,7 @@ const MainHeader = () => {
         </div>
         <p className="text-dm font-semibold text-black">{renderTitle()}</p>
 
-        <div
+        {/* <div
           onClick={() => setDrawer(!drawer)}
           className={`${
             ["/", "/calculate", "/address"].includes(pathname)
@@ -133,7 +133,7 @@ const MainHeader = () => {
           }xs:block lg:hidden pr-3`}
         >
           <MenuIcon />
-        </div>
+        </div> */}
       </header>
       {/* mobile header end */}
 
@@ -158,7 +158,7 @@ const MainHeader = () => {
           >
             <HomeIcon />
           </span>
-          Нүүр хуудас
+          Нүүр
         </Link>
         <Link
           to={`/calculate`}

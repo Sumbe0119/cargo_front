@@ -31,6 +31,7 @@ const AppRoutes = () => {
               <Route path="password" element={<PasswordChange />} />
             </Route>
             <Route path="/profile/mobile" element={<Profile />} />
+            <Route path="/password" element={<PasswordChange />} />
             <Route path="/order" element={<Order />} />
             <Route path="*" element={<Notfound />} />
           </Route>

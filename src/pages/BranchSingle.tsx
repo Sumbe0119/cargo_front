@@ -16,7 +16,7 @@ const BranchSingle = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   return (
-    <div className="simple-container xs:space-y-3 lg:space-y-12 xs:px-5 lg:px-0">
+    <div className="simple-container xs:space-y-3 lg:space-y-12 xs:px-5 lg:px-0 xs:mt-6 lg:mt-24">
       <div className="xs:hidden lg:flex gap-6">
         <div
           onClick={() => navigate("/address")}

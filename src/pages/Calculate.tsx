@@ -96,7 +96,7 @@ const Calculate = () => {
   }, [price]);
 
   return (
-    <div className="simple-container xs:px-4 lg:px-0 xs:space-y-3 lg:space-y-12 xs:mt-6 lg:mt-12">
+    <div className="simple-container xs:px-4 lg:px-0 xs:space-y-3 lg:space-y-12 xs:mt-6 lg:mt-24">
       {/* Агуулах сонгох хэсэг */}
       <div className="flex items-start justify-between">
         <h1 className="grid gap-1 leading-3">
@@ -147,6 +147,7 @@ const Calculate = () => {
         <h2 className="text-sm font-medium text-black">Ачаа овор хэмжээ</h2>
         <div className="grid xs:grid-cols-2 lg:grid-cols-4 xs:gap-3 lg:gap-6">
           <CustomInput
+            label="Өргөн"
             placeholder="өргөн"
             value={dimensions.width}
             onChange={(e) => handleChange("width", e)}
@@ -156,6 +157,7 @@ const Calculate = () => {
             simpleText="cm"
           />
           <CustomInput
+            label="Өндөр"
             placeholder="өндөр"
             value={dimensions.height}
             onChange={(e) => handleChange("height", e)}
@@ -165,6 +167,7 @@ const Calculate = () => {
             simpleText="cm"
           />
           <CustomInput
+            label="Урт"
             placeholder="урт"
             value={dimensions.length}
             onChange={(e) => handleChange("length", e)}
@@ -174,6 +177,7 @@ const Calculate = () => {
             simpleText="cm"
           />
           <CustomInput
+            label="Жин"
             placeholder="жин"
             value={dimensions.weight}
             onChange={(e) => handleChange("weight", e)}
@@ -183,6 +187,10 @@ const Calculate = () => {
             simpleText="kg"
           />
         </div>
+      </div>
+      <div className="flex items-center justify-center w-full gap-3">
+        <img className="xs:h-[150px] lg:h-[200px] w-auto" src="/cargo_1.png" />
+        <img className="xs:h-[150px] lg:h-[200px] w-auto" src="/cargo_2.png" />
       </div>
       <div className="flex-col flex gap-5 items-start text-dark font-regular">
         <div className="grid gap-3 leading-none text-base text-black font-semibold">

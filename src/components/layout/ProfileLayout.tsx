@@ -11,7 +11,7 @@ const ProfileLayout = () => {
   return (
     <>
       <MediaQuery minWidth={769}>
-        <div className="container flex gap-6">
+        <div className="container flex gap-6 xs:mt-6 lg:mt-24">
           <div className="block w-[340px] border border-light rounded-lg">
             <div className="flex-col flex px-5 py-3">
               <Link

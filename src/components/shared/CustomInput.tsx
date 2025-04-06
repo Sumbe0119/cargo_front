@@ -27,7 +27,7 @@ const CustomInput = ({
   inputMode
 }: Props) => {
   return (
-    <div>
+    <div className="space-y-2">
       {label ? (
         <label className="text-sm text-dark font-medium">{label}</label>
       ) : null}
