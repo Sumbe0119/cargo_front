@@ -187,8 +187,8 @@ const Calculate = () => {
       </div>
 
       <div className="flex items-center justify-center w-full gap-3">
-        <img className="xs:h-[150px] lg:h-[200px] w-auto" src="/cargo_1.png" />
-        <img className="xs:h-[150px] lg:h-[200px] w-auto" src="/cargo_2.png" />
+        <img className="xs:h-[140px] lg:h-[200px] w-auto object-cover bg-cover" src="/cargo_1.png" />
+        <img className="xs:h-[140px] lg:h-[200px] w-auto object-cover bg-cover" src="/cargo_2.png" />
       </div>
       <div className="flex-col flex gap-5 items-start text-dark font-regular">
         <div className="grid gap-3 leading-none text-base text-black font-semibold">
